@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angularInstaRunner">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <base href="/">
+    
+    <title></title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Instarunner</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#cafeteria">Cafeteria</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="container">
+            <h2><%= menu.cafeteria_name%></h2>
+            <hr class="star-primary">
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="cafeteria-menu" ng-controller="ItemSelectionController as itemSelection">
+                    
+                    <p>Main Menu</p>
+                    <ul class="list-group">
+                        <% menu.main_menu_items.forEach(function(menu) { %>
+                            <li class="list-group-item menu-row" ng-click="itemSelection.selectionMade($event)">
+                                <div class="row">
+                                    <div class="col-xs-9 menu-item"> <%= menu.menu_item %></div>
+                                    <div class="col-xs-2">$<span class="menu-price"><%= menu.price %></span></div>
+                                    <div class="col-xs-1 menu-selected"><span class="fa"></span></div>
+                                </div>
+                            </li>
+                           
+                        <% }); %> 
+                            
+                    </ul>
+
+                    <!-- old template - remove
+                    <ul class="list-group">
+                        <% menu.main_menu_items.forEach(function(menu) { %>
+                        <li class="list-group-item">
+                            <div class="col-lg-4">
+                                 <%= menu.menu_item %>
+                            </div>
+                           
+                        </li>
+                        <% }); %> 
+                            
+                    </ul>
+                    -->
+
+                    <p>Beverages</p>
+                    <ul class="list-group">
+                        <% menu.beverage.forEach(function(beverage) { %>
+                            <li class="list-group-item menu-row" ng-click="itemSelection.selectionMade($event)">
+                                <div class="row">
+                                    <div class="col-xs-9 menu-item"> <%= beverage.beverage_item %></div>
+                                    <div class="col-xs-2">$<span class="menu-price"><%= beverage.price %></span></div>
+                                    <div class="col-xs-1 menu-selected"><span class="fa"></span></div>
+                                </div>
+                            </li>
+                           
+                        <% }); %> 
+                            
+                    </ul>
+
+                    <p>Order Checkout</p>
+                    <small><i>*Review Order and set menu quantity next screen</i></small>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-xs-6"></div>
+                                <div class="col-xs-6">
+                                    <span class="checkout-total title pull-right">Total: <span class="checkout-total amount"><h3>$ {{itemSelection.totalPrice()}}</h3></span></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"></div>
+                                <div class="col-xs-6">
+                                    <a href="/checkout" role="button" class="btn btn-default btn-checkout pull-right"><i class="fa fa-shopping-cart fa-lg"></i> Checkout</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="row">
+                        <div class="col-xs-10"></div>
+                        <div class="col-xs-2">
+                            
+                        </div>
+                    </div>
+
+                    <div class="row">&nbsp;</div>                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>About Freelancer</h3>
+                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Your Website 2014
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Angular Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script src="js/angularInstarunner.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/freelancer.js"></script>
+
+</body>
+
+</html>

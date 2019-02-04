@@ -1,0 +1,4 @@
+[{"id":"1","name":"Taco Station","open_close_status":"Open","store_phone_number":"408-999-0001","store_hours_description":"M-F, 7am - 9pm"},
+{"id":"2","name":"Pizza Everyday","open_close_status":"Open","store_phone_number":"408-999-0002","store_hours_description":"M-F, 7am - 9pm"},
+{"id":"3","name":"Asian Express ","open_close_status":"Open","store_phone_number":"408-999-0003","store_hours_description":"M-F, 7am - 9pm"},
+{"id":"4","name":"Texas Style Mix","open_close_status":"Open","store_phone_number":"408-999-0004","store_hours_description":"M-F, 7am - 9pm"}]

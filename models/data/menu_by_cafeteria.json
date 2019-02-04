@@ -1,0 +1,232 @@
+{
+	"1": {
+	   "cafeteria_name": "Taco Station",
+       "main_menu_items": [
+       		{
+       			"menu_id": 1,
+       			"menu_item": "Regular Taco",
+       			"menu_description": "",
+       			"menu_extras": [],
+       			"price": 0.99
+       		},
+       		{
+       			"menu_id": 2,
+       			"menu_item": "Supreme Taco",
+       			"menu_description": "",
+       			"menu_extras": [],
+       			"price": 1.29
+       		},
+       		{
+       			"menu_id": 3,
+       			"menu_item": "Steak Taco",
+       			"menu_description": "",
+       			"menu_extras": [],
+       			"price": 1.99
+       		},
+       		{
+       			"menu_id": 4,
+       			"menu_item": "Nacho Super Supreme",
+       			"menu_description": "",
+       			"menu_extras": [],
+       			"price": 2.49
+       		}
+       ],
+       "beverage": [
+       		{
+       			"beverage_id": 1,
+       			"beverage_item": "Bottled Water",
+       			"price": 1.50
+       		},
+       		{
+       			"beverage_id": 1,
+       			"beverage_item": "Coke",
+       			"price": 1.50
+       		},
+       		{
+       			"beverage_id": 1,
+       			"beverage_item": "Sprite",
+       			"price": 1.50
+       		},
+       		{
+       			"beverage_id": 1,
+       			"beverage_item": "Starbucks Coffee",
+       			"price": 1.50
+       		}
+       ]
+	},
+
+	"2": {
+	   "cafeteria_name": "Pizza Everyday",
+       "main_menu_items": [
+       		{
+       			"menu_id": 1,
+       			"menu_item": "Pizza Slice",
+       			"menu_description": "",
+       			"menu_extras": [],
+       			"price": 2.50
+       		},
+       		{
+       			"menu_id": 2,
+       			"menu_item": "Pizza Dog",
+       			"menu_description": "",
+       			"menu_extras": [],
+       			"price": 2.50
+       		},
+       		{
+       			"menu_id": 3,
+       			"menu_item": "Pizza Burrito",
+       			"menu_description": "",
+       			"menu_extras": [],
+       			"price": 1.50
+       		},
+       		{
+       			"menu_id": 4,
+       			"menu_item": "Caesar Salad",
+       			"menu_description": "",
+       			"menu_extras": [],
+       			"price": 2.00
+       		}
+       ],
+       "beverage": [
+       		{
+       			"beverage_id": 1,
+       			"beverage_item": "Bottled Water",
+       			"price": 1.50
+       		},
+       		{
+       			"beverage_id": 1,
+       			"beverage_item": "Coke",
+       			"price": 1.50
+       		},
+       		{
+       			"beverage_id": 1,
+       			"beverage_item": "Sprite",
+       			"price": 1.50
+       		},
+       		{
+       			"beverage_id": 1,
+       			"beverage_item": "Starbucks Coffee",
+       			"price": 1.50
+       		}
+       ]
+	},
+
+	"3": {
+	   "cafeteria_name": "Asian Express",
+       "main_menu_items": [
+       		{
+       			"menu_id": 1,
+       			"menu_item": "Chow Mein",
+       			"menu_description": "",
+       			"menu_extras": [],
+       			"price": 3.00
+       		},
+       		{
+       			"menu_id": 2,
+       			"menu_item": "Fried Rice",
+       			"menu_description": "",
+       			"menu_extras": [],
+       			"price": 3.00
+       		},
+       		{
+       			"menu_id": 3,
+       			"menu_item": "Steamed Vegetables",
+       			"menu_description": "",
+       			"menu_extras": [],
+       			"price": 1.99
+       		},
+       		{
+       			"menu_id": 4,
+       			"menu_item": "Firecracker Chicken",
+       			"menu_description": "",
+       			"menu_extras": [],
+       			"price": 2.50
+       		},
+       		{
+       			"menu_id": 5,
+       			"menu_item": "Orange Chicken",
+       			"menu_description": "",
+       			"menu_extras": [],
+       			"price": 2.99
+       		}
+       ],
+       "beverage": [
+       		{
+       			"beverage_id": 1,
+       			"beverage_item": "Bottled Water",
+       			"price": 1.50
+       		},
+       		{
+       			"beverage_id": 1,
+       			"beverage_item": "Coke",
+       			"price": 1.50
+       		},
+       		{
+       			"beverage_id": 1,
+       			"beverage_item": "Sprite",
+       			"price": 1.50
+       		},
+       		{
+       			"beverage_id": 1,
+       			"beverage_item": "Starbucks Coffee",
+       			"price": 1.50
+       		}
+       ]
+	}, 
+
+	"4": {
+	   "cafeteria_name": "Tex Style Mix",
+       "main_menu_items": [
+       		{
+       			"menu_id": 1,
+       			"menu_item": "Cheese Burrito",
+       			"menu_description": "",
+       			"menu_extras": [],
+       			"price": 2.50
+       		},
+       		{
+       			"menu_id": 2,
+       			"menu_item": "Tex Style Buffalo Wings (5)",
+       			"menu_description": "",
+       			"menu_extras": [],
+       			"price": 3.50
+       		},
+       		{
+       			"menu_id": 3,
+       			"menu_item": "Enchiladas",
+       			"menu_description": "",
+       			"menu_extras": [],
+       			"price": 3.00
+       		},
+       		{
+       			"menu_id": 4,
+       			"menu_item": "Spicy Chicken Quesadilla",
+       			"menu_description": "",
+       			"menu_extras": [],
+       			"price": 4.00
+       		}
+       ],
+       "beverage": [
+       		{
+       			"beverage_id": 1,
+       			"beverage_item": "Bottled Water",
+       			"price": 1.50
+       		},
+       		{
+       			"beverage_id": 1,
+       			"beverage_item": "Coke",
+       			"price": 1.50
+       		},
+       		{
+       			"beverage_id": 1,
+       			"beverage_item": "Sprite",
+       			"price": 1.50
+       		},
+       		{
+       			"beverage_id": 1,
+       			"beverage_item": "Starbucks Coffee",
+       			"price": 1.50
+       		}
+       ]
+	}
+}
